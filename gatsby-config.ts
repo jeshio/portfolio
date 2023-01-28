@@ -1,4 +1,4 @@
-import type {GatsbyConfig} from 'gatsby'
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -27,7 +27,7 @@ const config: GatsbyConfig = {
         // should be an object or a function that is executed in the browser
         //
         // Defaults to null
-        defaultDataLayer: {platform: 'gatsby'},
+        defaultDataLayer: { platform: 'gatsby' },
 
         // Specify optional GTM environment details.
         gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
