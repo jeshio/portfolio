@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby'
+import path from 'path'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -12,6 +13,56 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-styled-components',
+    'gatsby-transformer-inline-svg',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          quality: 90,
+          breakpoints: [360, 768, 1024, 1440],
+          backgroundColor: 'transparent',
+          blurredOptions: {
+            placeholder: 'blurred',
+          },
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-omni-font-loader',
+      options: {
+        enableListener: true,
+        preconnect: [
+          'https://fonts.googleapis.com',
+          'https://fonts.gstatic.com',
+        ],
+        web: [
+          {
+            name: 'Condiment',
+            file: 'https://fonts.googleapis.com/css2?family=Condiment&display=swap',
+          },
+          {
+            name: 'Roboto',
+            file: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@containers': path.resolve(__dirname, 'src/containers'),
+          '@images': path.resolve(__dirname, 'src/images'),
+          '@configs': path.resolve(__dirname, 'src/configs'),
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {

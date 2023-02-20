@@ -1,8 +1,28 @@
 import React, { FC, ReactNode } from 'react'
-import { SLayout } from './index.styled'
+import {
+  GlobalStyles,
+  SLayout,
+  SLeftBackground,
+  SPlainImage1,
+  SPlainImage2,
+  SPlainImage3,
+  SRightBackground,
+} from './index.styled'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '@configs/theme'
 
 export const Layout: FC<{
   children: ReactNode
-}> = ({ children }) => <SLayout>{children}</SLayout>
+}> = ({ children }) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    <SLeftBackground />
+    <SRightBackground />
+    <SPlainImage3 />
+    <SPlainImage2 />
+    <SPlainImage1 />
+    <SLayout>{children}</SLayout>
+  </ThemeProvider>
+)
 
 export default Layout
