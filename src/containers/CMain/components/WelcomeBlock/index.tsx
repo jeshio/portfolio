@@ -38,7 +38,7 @@ export const WelcomeBlock = () => (
     </SCloud1ImageWrapper>
     <SBirdsImageWrapper>
       <StaticImage
-        src="../../../../images/birds.png"
+        src="../../images/birds.png"
         alt="Birds"
         placeholder="blurred"
         breakpoints={[358]}
@@ -47,7 +47,7 @@ export const WelcomeBlock = () => (
     </SBirdsImageWrapper>
     <SCloud2ImageWrapper>
       <StaticImage
-        src="../../../../images/cloud-2.png"
+        src="../../images/cloud-2.png"
         alt="Small Cloud"
         placeholder="blurred"
         breakpoints={[115]}

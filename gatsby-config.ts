@@ -47,7 +47,11 @@ const config: GatsbyConfig = {
           },
           {
             name: 'Roboto',
-            file: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+            file: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap',
+          },
+          {
+            name: 'Roboto Slab',
+            file: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap',
           },
         ],
       },

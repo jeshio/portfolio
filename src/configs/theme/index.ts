@@ -3,6 +3,7 @@ export const theme = {
     white: '#fff',
     orange100: '#FD552A',
     green100: '#0f0',
+    blue800: '#575879',
   },
 }
 

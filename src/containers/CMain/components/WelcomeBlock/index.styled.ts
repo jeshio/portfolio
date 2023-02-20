@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Button } from '@components/Button'
 
 export const SWelcomeBlock = styled.div(
   () => css`
@@ -53,7 +54,7 @@ export const SContent = styled.div(
   `
 )
 
-export const SRoleText = styled.h2(
+export const SRoleText = styled.h1(
   ({ theme }) => css`
     position: absolute;
     left: 0;
@@ -66,7 +67,7 @@ export const SRoleText = styled.h2(
     letter-spacing: 0.135em;
     text-transform: uppercase;
     color: ${theme.colors.white};
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     transform: matrix(0.98, -0.21, -0.01, 1, 0, 0);
   `
 )
@@ -82,29 +83,20 @@ export const SNameText = styled.h2(
     font-size: 42px;
     line-height: 64px;
     color: ${theme.colors.white};
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     transform: rotate(-12deg);
   `
 )
 
-export const SButton = styled.button(
-  ({ theme }) => css`
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 22px;
-    letter-spacing: 0.135em;
-    background: ${theme.colors.orange100};
-    color: ${theme.colors.white};
-    border-radius: 2px;
-    text-transform: uppercase;
+export const SButton = styled(Button)(
+  () => css`
     position: absolute;
+    font-size: 1.1875rem;
     bottom: 88px;
     left: 50%;
     margin-left: -130px;
     width: 260px;
     height: 55px;
-    border: none;
     filter: drop-shadow(-3px 25px 44px rgba(32, 99, 114, 0.39));
     transform: matrix(0.98, -0.2, -0.25, 0.97, 0, 0);
   `
