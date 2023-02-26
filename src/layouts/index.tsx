@@ -1,6 +1,8 @@
 import React, { FC, ReactNode } from 'react'
 import {
   GlobalStyles,
+  SBottomPlainImage1,
+  SBottomPlainImage2,
   SLayout,
   SLeftBackground,
   SPlainImage1,
@@ -24,12 +26,16 @@ export const Layout: FC<{
       <meta name="apple-mobile-web-app-capable" content="yes" />
     </Helmet>
     <GlobalStyles />
-    <SLeftBackground />
-    <SRightBackground />
-    <SPlainImage3 />
-    <SPlainImage2 />
-    <SPlainImage1 />
-    <SLayout>{children}</SLayout>
+    <SLayout>
+      {children}
+      <SPlainImage3 />
+      <SPlainImage2 />
+      <SPlainImage1 />
+      <SLeftBackground />
+      <SRightBackground />
+      <SBottomPlainImage1 />
+      <SBottomPlainImage2 />
+    </SLayout>
   </ThemeProvider>
 )
 

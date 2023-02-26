@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
 
-export const STextList = styled.ul(
-  ({ theme }) => css`
+export const STextList = styled.ul<{
+  $noPoints: boolean
+}>(
+  ({ theme, $noPoints }) => css`
     color: ${theme.colors.blue800};
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
@@ -10,6 +12,12 @@ export const STextList = styled.ul(
     letter-spacing: 0.02em;
     margin: 0;
     padding: 0 0 0 20px;
+
+    ${$noPoints &&
+    css`
+      list-style: none;
+      padding-left: 0;
+    `}
   `
 )
 

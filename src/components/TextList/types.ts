@@ -5,4 +5,5 @@ export type TextListProps = DetailedHTMLProps<
   HTMLUListElement
 > & {
   items: (string | ReactElement)[]
+  noPoints?: boolean
 }

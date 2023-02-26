@@ -71,7 +71,7 @@ export const SYearsList = styled.ul(
 export const SCompanyLine = styled.div(
   ({ theme }) => css`
     width: 25px;
-    width: clamp(25px, 10vw, 60px);
+    width: clamp(25px, 7vw, 45px);
     height: 1px;
     background: ${theme.colors.white};
     position: absolute;
@@ -102,7 +102,7 @@ export const SCompaniesList = styled.ul(
 
       &:nth-child(2) {
         margin-bottom: 72px;
-        margin-left: calc(min(81px + 27cqw, 61cqw) - 75px);
+        margin-left: calc(min(81px + 27cqw, 59cqw) - 75px);
 
         ${SCompanyLine} {
           &:nth-child(1) {
@@ -118,7 +118,7 @@ export const SCompaniesList = styled.ul(
 
       &:nth-child(3) {
         margin-bottom: 71px;
-        margin-left: calc(min(66px + 60cqw, 84cqw) - 75px);
+        margin-left: calc(min(66px + 60cqw, 82cqw) - 75px);
 
         ${SCompanyLine} {
           height: 43px;
