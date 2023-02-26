@@ -3,7 +3,17 @@ import { TextList } from '@components/TextList'
 import { Title } from '@components/Title'
 import { Button } from '@components/Button'
 
-export const SAboutAndSkills = styled.div(() => css``)
+export const SAboutAndSkills = styled.section(
+  () => css`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    > * {
+      flex: 1 1 350px;
+    }
+  `
+)
 
 export const SAbout = styled.div(
   () => css`
@@ -14,6 +24,8 @@ export const SAbout = styled.div(
       rgba(255, 255, 255, 0) 94%
     );
     position: relative;
+    z-index: 1;
+    container-type: inline-size;
 
     &::before {
       content: '';
@@ -73,7 +85,7 @@ export const STextList = styled(TextList)(
   ({ theme }) => css`
     color: ${theme.colors.white};
     list-style-type: disclosure-closed;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
 
     > * {
       padding-left: 7px;
@@ -93,6 +105,8 @@ export const SCloud2ImageWrapper = styled.div(
     bottom: -28px;
     transform: rotate(12.14deg);
     z-index: 1;
+
+    @contain;
   `
 )
 

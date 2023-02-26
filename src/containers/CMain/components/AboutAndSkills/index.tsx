@@ -16,6 +16,15 @@ export const AboutAndSkills = () => {
   return (
     <SAboutAndSkills>
       <SAbout>
+        <SCloud2ImageWrapper>
+          <StaticImage
+            src="../../images/cloud-2.png"
+            alt="Small Cloud"
+            placeholder="blurred"
+            breakpoints={[115]}
+            quality={90}
+          />
+        </SCloud2ImageWrapper>
         <Title level={2}>About</Title>
         <Paragraph>
           Hello and welcome! My name is Georgey Ivanov and I am a seasoned
@@ -33,15 +42,6 @@ export const AboutAndSkills = () => {
           including technical teams and management, to gather requirements and
           explain technical designs/features.
         </Paragraph>
-        <SCloud2ImageWrapper>
-          <StaticImage
-            src="../../images/cloud-2.png"
-            alt="Small Cloud"
-            placeholder="blurred"
-            breakpoints={[115]}
-            quality={90}
-          />
-        </SCloud2ImageWrapper>
       </SAbout>
       <SSkills>
         <SSkillsTitle level={2}>Skills</SSkillsTitle>

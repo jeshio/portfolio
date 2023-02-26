@@ -7,11 +7,15 @@ export const SParagraph = styled.p<{
   ({ theme }) => css`
     color: ${theme.colors.blue800};
     font-family: 'Roboto Slab', serif;
+    font-size: clamp(0.875rem, 3vw, 1rem);
     font-weight: 300;
-    font-size: 0.875rem;
     line-height: 141%;
     letter-spacing: 0.04em;
     margin: 20px 0;
+
+    @container (width < 50ch) {
+      font-size: 0.875rem;
+    }
 
     &:first-child {
       margin-top: 0;

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Button } from '@components/Button'
 
-export const SWelcomeBlock = styled.div(
+export const SWelcomeBlock = styled.section(
   () => css`
     position: relative;
     margin: 10px 10px 0;
