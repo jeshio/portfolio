@@ -17,6 +17,7 @@
       "@components/*": ["components/*"],
       "@containers/*": ["containers/*"],
       "@images/*": ["images/*"],
+      "@helpers/*": ["helpers/*"],
       "@configs/*": ["configs/*"]
     }
   },

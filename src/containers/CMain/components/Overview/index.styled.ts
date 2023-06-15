@@ -3,9 +3,10 @@ import { Button } from '@components/Button'
 
 export const SOverview = styled.section(
   ({ theme }) => css`
-    padding: 40px 20px 50px;
+    padding: var(${theme.cssVarNames.globalBlockPadding});
     background: linear-gradient(135deg, #55baad 5%, rgba(88, 197, 183, 0) 76%);
     position: relative;
+    margin: var(${theme.cssVarNames.globalBlockMargin});
 
     * {
       color: ${theme.colors.white};
@@ -70,7 +71,6 @@ export const SYearsList = styled.ul(
 
 export const SCompanyLine = styled.div(
   ({ theme }) => css`
-    width: 25px;
     width: clamp(25px, 7vw, 45px);
     height: 1px;
     background: ${theme.colors.white};

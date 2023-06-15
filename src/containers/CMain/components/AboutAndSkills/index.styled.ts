@@ -2,22 +2,31 @@ import styled, { css } from 'styled-components'
 import { TextList } from '@components/TextList'
 import { Title } from '@components/Title'
 import { Button } from '@components/Button'
+import { media } from '@helpers/media'
 
 export const SAboutAndSkills = styled.section(
-  () => css`
+  ({ theme }) => css`
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    margin: var(${theme.cssVarNames.globalBlockMargin});
 
     > * {
       flex: 1 1 350px;
     }
+
+    ${media.md(
+      () => css`
+        flex-direction: column;
+        flex-wrap: nowrap;
+      `
+    )}
   `
 )
 
 export const SAbout = styled.div(
-  () => css`
-    padding: 40px 20px;
+  ({ theme }) => css`
+    padding: var(${theme.cssVarNames.globalBlockPadding});
     background: linear-gradient(
       143deg,
       rgba(250, 248, 243, 0.8) 14%,
@@ -41,8 +50,8 @@ export const SAbout = styled.div(
 )
 
 export const SSkills = styled.div(
-  () => css`
-    padding: 40px 20px;
+  ({ theme }) => css`
+    padding: var(${theme.cssVarNames.globalBlockPadding});
     position: relative;
     background: linear-gradient(297deg, rgba(79, 70, 81, 0) 60%, #674a6a 102%);
 
@@ -78,6 +87,12 @@ export const SSkillsTitle = styled(Title)(
   ({ theme }) => css`
     color: ${theme.colors.white};
     margin-bottom: 20px;
+
+    ${media.md(
+      () => css`
+        margin-bottom: 30px;
+      `
+    )}
   `
 )
 
@@ -107,6 +122,12 @@ export const SCloud2ImageWrapper = styled.div(
     z-index: 1;
 
     @contain;
+
+    ${media.md(
+      () => css`
+        display: none;
+      `
+    )}
   `
 )
 
@@ -116,5 +137,11 @@ export const SButton = styled(Button)(
     display: block;
     margin: 30px auto 0;
     filter: drop-shadow(10px 15px 40px rgba(22, 19, 22, 0.3));
+
+    ${media.md(
+      () => css`
+        margin-top: 40px;
+      `
+    )}
   `
 )

@@ -1,8 +1,11 @@
 import styled, { createGlobalStyle, css } from 'styled-components'
 import PlainImage from '../images/background-plain.svg'
 import BottomPlainImage from '../images/background-bottom-plain.svg'
+import { cssVarsSection } from '@configs/theme'
 
 export const GlobalStyles = createGlobalStyle`
+  @import-normalize;
+  
   * {
     box-sizing: border-box;
   }
@@ -12,13 +15,14 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     overflow-x: hidden;
     min-width: 360px;
-    max-width: 767px;
   }
   
   body {
     margin: 0;
     position: relative;
   }
+  
+  ${cssVarsSection};
 `
 
 export const SLayout = styled.div(

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ParagraphProps } from '@components/Paragraph/types'
+import { media } from '@helpers/media'
 
 export const SParagraph = styled.p<{
   $level: ParagraphProps['level']
@@ -24,5 +25,12 @@ export const SParagraph = styled.p<{
     &:last-child {
       margin-bottom: 0;
     }
+
+    ${media.md(
+      () => css`
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        margin: 30px 0;
+      `
+    )}
   `
 )

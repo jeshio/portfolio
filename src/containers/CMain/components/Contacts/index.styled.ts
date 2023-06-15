@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { TextList } from '@components/TextList'
+import { breakpoints, media } from '@helpers/media'
 
 export const SContacts = styled.section(
   ({ theme }) => css`
@@ -9,21 +10,31 @@ export const SContacts = styled.section(
     * {
       color: ${theme.colors.white};
     }
+
+    ${media.md(
+      () => css`
+        margin-bottom: 40px;
+      `
+    )}
   `
 )
 
 export const SContactsInner = styled.div(
-  () => css`
+  ({ theme }) => css`
     position: relative;
-    margin: 0 10px;
+    margin: var(${theme.cssVarNames.globalBlockMargin});
+
+    @media (max-width: ${breakpoints.md - 1}px) {
+      margin: 0 10px;
+    }
   `
 )
 
 export const SContactsContent = styled.div(
-  () => css`
+  ({ theme }) => css`
     border-radius: 0 0 40px 40px;
     overflow: hidden;
-    padding: 40px 20px 50px;
+    padding: var(${theme.cssVarNames.globalBlockPadding});
     background: linear-gradient(345deg, #3c2a3f 5%, rgba(93, 70, 97, 0) 113%);
     position: relative;
 
@@ -37,6 +48,14 @@ export const SContactsContent = styled.div(
       z-index: -1;
       background: linear-gradient(304deg, #59405e 40%, rgba(93, 70, 97, 0) 87%);
     }
+
+    ${media.md(
+      () => css`
+        padding-bottom: calc(
+          var(${theme.cssVarNames.globalBlockPaddingVertical}) + 30px
+        );
+      `
+    )}
   `
 )
 

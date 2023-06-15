@@ -13,6 +13,7 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-layout',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-postcss',
     'gatsby-transformer-inline-svg',
     'gatsby-plugin-image',
     {
@@ -46,6 +47,10 @@ const config: GatsbyConfig = {
             file: 'https://fonts.googleapis.com/css2?family=Condiment&display=swap',
           },
           {
+            name: 'Courgette',
+            file: 'https://fonts.googleapis.com/css2?family=Courgette&display=swap',
+          },
+          {
             name: 'Roboto',
             file: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap',
           },
@@ -63,6 +68,7 @@ const config: GatsbyConfig = {
           '@components': path.resolve(__dirname, 'src/components'),
           '@containers': path.resolve(__dirname, 'src/containers'),
           '@images': path.resolve(__dirname, 'src/images'),
+          '@helpers': path.resolve(__dirname, 'src/helpers'),
           '@configs': path.resolve(__dirname, 'src/configs'),
         },
       },

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { media } from '@helpers/media'
 
 export const SBackgroundContainer = styled.div(
   () => css`
@@ -9,6 +10,13 @@ export const SBackgroundContainer = styled.div(
     max-height: 670px;
     border-radius: 40px 40px 0 0;
     filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.17));
+
+    ${media.md(
+      () => css`
+        min-height: 737px;
+        max-height: 837px;
+      `
+    )}
   `
 )
 
