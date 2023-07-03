@@ -14,7 +14,7 @@ export const Overview: FC = () => {
   return (
     <SOverview>
       <Title level={2}>CAREER OVERVIEW</Title>
-      <Title level={3}>excluding own projects</Title>
+      <Title level={3}>without own projects</Title>
       <SDiagram>
         <SYearsList>
           <li>2014</li>

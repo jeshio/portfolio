@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Button } from '@components/Button'
+import { media } from '@helpers/media'
 
 export const SOverview = styled.section(
   ({ theme }) => css`
@@ -28,6 +29,12 @@ export const SOverview = styled.section(
       background: #36968a;
       z-index: -1;
     }
+
+    ${media.md(
+      () => css`
+        display: none;
+      `
+    )}
   `
 )
 
@@ -96,7 +103,7 @@ export const SCompaniesList = styled.ul(
         margin-left: 2cqw;
 
         ${SCompanyLine} {
-          height: 120px;
+          height: 150px;
         }
       }
 
@@ -150,11 +157,6 @@ export const SRolesList = styled.ul(
       padding-top: 3px;
     }
 
-    hr {
-      border-top: 2px solid ${theme.colors.white};
-      margin: 0;
-    }
-
     li > div {
       position: relative;
     }
@@ -165,6 +167,11 @@ export const SRolesList = styled.ul(
       position: absolute;
       right: 0;
       top: -36px;
+    }
+
+    hr {
+      border-top: 2px solid ${theme.colors.white};
+      margin: 0;
     }
 
     li {
