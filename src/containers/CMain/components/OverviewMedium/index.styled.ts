@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components'
 import { Button } from '@components/Button'
-import { breakpoints } from '@helpers/media'
+import { breakpoints, media } from '@helpers/media'
 
 export const SOverviewMedium = styled.section(
   ({ theme }) => css`
     padding: var(${theme.cssVarNames.globalBlockPadding});
     background: linear-gradient(135deg, #55baad 5%, rgba(88, 197, 183, 0) 76%);
     position: relative;
-    margin: var(${theme.cssVarNames.globalBlockMargin});
 
     * {
       color: ${theme.colors.white};
@@ -36,12 +35,58 @@ export const SOverviewMedium = styled.section(
   `
 )
 
+export const SBirdsImageWrapper = styled.div(
+  () => css`
+    position: absolute;
+    width: 137px;
+    top: 49px;
+    right: -11px;
+
+    ${media.lg(
+      () => css`
+        width: 168px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        width: 207px;
+        right: -25px;
+      `
+    )}
+  `
+)
+
 export const SContent = styled.div(
   () => css`
     position: relative;
     z-index: 1;
     display: flex;
     margin: 110px 0;
+
+    ${media.lg(
+      () => css`
+        margin: 130px 0 140px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        margin: 160px 0 160px;
+        padding: 0 50px;
+      `
+    )}
+  `
+)
+
+export const STitlesWrapper = styled.div(
+  () => css`
+    ${media.xl(
+      () => css`
+        display: flex;
+        gap: 15px;
+      `
+    )}
   `
 )
 
@@ -61,8 +106,24 @@ export const SYearsList = styled.ul(
 
     li > div {
       position: absolute;
-      bottom: -68px;
+      bottom: -72px;
     }
+
+    ${media.lg(
+      () => css`
+        font-size: 20px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 28px;
+
+        li > div {
+          bottom: -92px;
+        }
+      `
+    )}
   `
 )
 
@@ -83,6 +144,22 @@ export const SCompaniesList = styled.ul(
         margin-bottom: 0;
       }
     }
+
+    ${media.lg(
+      () => css`
+        font-size: 20px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 26px;
+
+        && {
+          margin-right: 48px;
+        }
+      `
+    )}
   `
 )
 
@@ -108,6 +185,12 @@ export const SWorkingLine = styled.div(
     position: absolute;
     width: 100%;
     top: -4px;
+
+    ${media.xl(
+      () => css`
+        border-width: 34px;
+      `
+    )}
   `
 )
 
@@ -131,12 +214,27 @@ export const SRolesList = styled.ul(
       position: absolute;
       top: -78px;
     }
+
+    ${media.lg(
+      () => css`
+        font-size: 16px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 20px;
+
+        li > div {
+          top: -108px;
+        }
+      `
+    )}
   `
 )
 
 export const SButton = styled(Button)(
   () => css`
-    padding: 0 55px;
     display: block;
     margin: 50px auto 0;
     filter: drop-shadow(-3px 25px 80px rgba(20, 125, 112, 0.8));

@@ -9,6 +9,7 @@ export const theme = {
     blue800: '#575879',
   },
   cssVarNames: {
+    globalBlockMaxWidth: '--global-block-max-width',
     globalBlockMargin: '--global-block-margin',
     globalBlockPadding: '--global-block-padding',
     globalBlockPaddingVertical: '--global-block-padding-vertical',
@@ -19,6 +20,7 @@ export const theme = {
 export const cssVarsSection = css(
   ({ theme }) => css`
     :root {
+      ${theme.cssVarNames.globalBlockMaxWidth}: 1349px;
       ${theme.cssVarNames.globalBlockMargin}: 0;
       ${theme.cssVarNames.globalBlockPaddingVertical}: 40px;
       ${theme.cssVarNames.globalBlockPaddingHorizontal}: 20px;
@@ -37,7 +39,9 @@ export const cssVarsSection = css(
 
       ${media.xl(
         () => css`
-          ${theme.cssVarNames.globalBlockMargin}: 0 auto;
+          ${theme.cssVarNames.globalBlockMargin}: 0 25px;
+          ${theme.cssVarNames.globalBlockPaddingVertical}: 90px;
+          ${theme.cssVarNames.globalBlockPaddingHorizontal}: 90px;
         `
       )}
     }

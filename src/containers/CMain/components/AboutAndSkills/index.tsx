@@ -33,15 +33,6 @@ export const AboutAndSkills = () => {
           as React, JavaScript, TS, Redux, Webpack and other, and have a passion
           for creating engaging, user-friendly web applications.
         </Paragraph>
-        <Paragraph>
-          I have a strong track record of delivering high-quality projects and
-          have a deep understanding of web development processes, including
-          coding standards, code reviews, version control, building, testing,
-          deployment, and monitoring. I am well-versed in using Agile/Scrum
-          methodologies and have experience collaborating with stakeholders,
-          including technical teams and management, to gather requirements and
-          explain technical designs/features.
-        </Paragraph>
       </SAbout>
       <SSkills>
         <SSkillsTitle level={2}>Skills</SSkillsTitle>

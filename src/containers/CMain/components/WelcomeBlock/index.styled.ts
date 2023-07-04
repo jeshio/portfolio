@@ -1,15 +1,25 @@
 import styled, { css } from 'styled-components'
 import { Button } from '@components/Button'
-import { media } from '@helpers/media'
+import { breakpoints, media } from '@helpers/media'
 
 export const SWelcomeBlock = styled.section(
   () => css`
     position: relative;
-    margin: 10px 10px 0;
+    margin-top: 10px;
+
+    @media (max-width: ${breakpoints.md - 1}px) {
+      padding: 0 10px;
+    }
 
     ${media.md(
       () => css`
-        margin: 20px 15px 0;
+        margin-top: 20px;
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        margin-top: 35px;
       `
     )}
   `
@@ -26,6 +36,13 @@ export const SLandscapeImageWrapper = styled.div(
       () => css`
         width: 1075px;
         right: calc(58% - 591px);
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        width: 1382px;
+        right: calc(58% - 755px);
       `
     )}
   `
@@ -45,6 +62,14 @@ export const SBirdsImageWrapper = styled.div(
         left: 69px;
       `
     )}
+
+    ${media.lg(
+      () => css`
+        width: 154px;
+        top: 116px;
+        left: 119px;
+      `
+    )}
   `
 )
 
@@ -58,6 +83,14 @@ export const SCloud1ImageWrapper = styled.div(
     ${media.md(
       () => css`
         width: 488px;
+        right: calc(-551px + 46%);
+        top: 48px;
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        width: 537px;
         right: calc(-551px + 46%);
         top: 48px;
       `
@@ -94,6 +127,13 @@ export const SContent = styled.div(
         left: calc(27vw - 98px);
       `
     )}
+
+    ${media.lg(
+      () => css`
+        top: 26%;
+        left: clamp(0px, calc(28vw - 128px), 430px);
+      `
+    )}
   `
 )
 
@@ -122,6 +162,14 @@ export const SRoleText = styled.h1(
         top: -18px;
       `
     )}
+
+    ${media.lg(
+      () => css`
+        font-size: 24px;
+        left: 268px;
+        top: -30px;
+      `
+    )}
   `
 )
 
@@ -144,6 +192,12 @@ export const SNameText = styled.h2(
         font-size: 60px;
       `
     )}
+
+    ${media.lg(
+      () => css`
+        font-size: 78px;
+      `
+    )}
   `
 )
 
@@ -157,12 +211,29 @@ export const SButton = styled(Button)(
     height: 55px;
     filter: drop-shadow(-3px 25px 44px rgba(32, 99, 114, 0.39));
     transform: matrix(0.98, -0.2, -0.25, 0.97, 0, 0);
+    padding: 0;
 
     ${media.md(
       () => css`
         left: calc(44vw - 227px);
         bottom: 320px;
         font-size: 1.375rem;
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        bottom: 380px;
+        font-size: 1.5rem;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 1.8rem;
+        left: calc(50% - 346px);
+        width: 320px;
+        height: 60px;
       `
     )}
   `

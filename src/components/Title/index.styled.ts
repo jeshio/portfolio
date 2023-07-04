@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { TitleProps } from './types'
+import { media } from '@helpers/media'
 
 export const STitle = styled.h1<{
   $level: TitleProps['level']
@@ -20,7 +21,13 @@ export const STitle = styled.h1<{
     font-weight: 500;
     line-height: 30px;
     text-transform: ${$level > 2 ? 'lowercase' : 'uppercase'};
-    margin: 0;
+    margin: 0 0 3px;
     color: ${theme.colors.blue800};
+
+    ${media.xl(
+      () => css`
+        margin: 0 0 9px;
+      `
+    )}
   `
 )

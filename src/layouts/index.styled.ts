@@ -2,6 +2,7 @@ import styled, { createGlobalStyle, css } from 'styled-components'
 import PlainImage from '../images/background-plain.svg'
 import BottomPlainImage from '../images/background-bottom-plain.svg'
 import { cssVarsSection } from '@configs/theme'
+import { media } from '@helpers/media'
 
 export const GlobalStyles = createGlobalStyle`
   @import-normalize;
@@ -36,32 +37,51 @@ export const SLayout = styled.div(
 
 export const SPlainImage1 = styled.div(
   () => css`
-    background: url('${PlainImage}');
+    background: url('${PlainImage}') no-repeat;
+    background-size: contain;
     width: 1075px;
     height: 860px;
     position: absolute;
     left: 88px;
     top: -175px;
     z-index: -1;
+
+    ${media.xl(
+      () => css`
+        left: 50%;
+        margin-left: -630px;
+        transform: rotate(9deg);
+      `
+    )}
   `
 )
 
 export const SPlainImage2 = styled.div(
   () => css`
-    background: url('${PlainImage}');
+    background: url('${PlainImage}') no-repeat;
+    background-size: contain;
     position: absolute;
-    width: 1174px;
+    width: calc(100vw - 23px);
     height: 939px;
     left: 23px;
     top: -174px;
     opacity: 0.3;
     z-index: -1;
+
+    ${media.xl(
+      () => css`
+        left: 50%;
+        margin-left: -684px;
+        transform: rotate(9deg);
+      `
+    )}
   `
 )
 
 export const SPlainImage3 = styled.div(
   () => css`
-    background: url('${PlainImage}');
+    background: url('${PlainImage}') no-repeat;
+    background-size: contain;
     position: absolute;
     width: 1399px;
     height: 1420px;
@@ -69,6 +89,13 @@ export const SPlainImage3 = styled.div(
     top: -225px;
     opacity: 0.1;
     z-index: -1;
+
+    ${media.xl(
+      () => css`
+        left: unset;
+        right: -201px;
+      `
+    )}
   `
 )
 
@@ -82,6 +109,13 @@ export const SBottomPlainImage1 = styled.div(
     left: calc(75vw - 535px);
     bottom: calc(33vw - 758px);
     z-index: -1;
+
+    ${media.xl(
+      () => css`
+        left: calc(50vw - 245px);
+        bottom: -90px;
+      `
+    )}
   `
 )
 
@@ -96,6 +130,13 @@ export const SBottomPlainImage2 = styled.div(
     bottom: calc(33vw - 758px);
     opacity: 0.3;
     z-index: -1;
+
+    ${media.xl(
+      () => css`
+        left: calc(50vw - 305px);
+        bottom: -100px;
+      `
+    )}
   `
 )
 

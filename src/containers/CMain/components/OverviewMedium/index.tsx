@@ -1,16 +1,19 @@
 import React, { FC, memo } from 'react'
 import {
+  SBirdsImageWrapper,
   SButton,
   SChart,
   SCompaniesList,
   SContent,
   SOverviewMedium,
   SRolesList,
+  STitlesWrapper,
   SWorkingLines,
   SYearsList,
 } from '@containers/CMain/components/OverviewMedium/index.styled'
 import { Title } from '@components/Title'
 import { useLogic } from '@containers/CMain/components/OverviewMedium/useLogic'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const OverviewMedium: FC = () => {
   const { uniqueCompanyNames, yearsHistory, rolesHistory, workingLines } =
@@ -18,8 +21,19 @@ const OverviewMedium: FC = () => {
 
   return (
     <SOverviewMedium>
-      <Title level={2}>CAREER OVERVIEW</Title>
-      <Title level={3}>without own projects</Title>
+      <SBirdsImageWrapper>
+        <StaticImage
+          src="../../images/birds.png"
+          alt="Birds"
+          placeholder="blurred"
+          breakpoints={[358]}
+          quality={90}
+        />
+      </SBirdsImageWrapper>
+      <STitlesWrapper>
+        <Title level={2}>CAREER OVERVIEW</Title>
+        <Title level={3}>without own projects</Title>
+      </STitlesWrapper>
       <SContent>
         <SCompaniesList>
           {uniqueCompanyNames.map(companyName => (

@@ -59,7 +59,7 @@ export const WelcomeBlock = () => (
         src="../../images/landscape.png"
         alt="Senior Frontend Developer Landscape"
         placeholder="blurred"
-        breakpoints={[836]}
+        breakpoints={[836, 1075, 1370]}
         quality={100}
       />
     </SLandscapeImageWrapper>

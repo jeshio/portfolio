@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { media } from '@helpers/media'
 
 export const SButton = styled.button(
   ({ theme }) => css`
@@ -12,7 +13,22 @@ export const SButton = styled.button(
     color: ${theme.colors.white};
     border-radius: 2px;
     text-transform: uppercase;
-    height: 40px;
     border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+
+    ${media.md(
+      () => css`
+        font-size: 1.25rem;
+        padding: 14px 66px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 1.5rem;
+        padding: 20px 66px;
+      `
+    )}
   `
 )

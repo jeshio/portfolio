@@ -16,13 +16,24 @@ export const SContacts = styled.section(
         margin-bottom: 40px;
       `
     )}
+
+    ${media.lg(
+      () => css`
+        margin-bottom: 60px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        margin-bottom: 80px;
+      `
+    )}
   `
 )
 
 export const SContactsInner = styled.div(
-  ({ theme }) => css`
+  () => css`
     position: relative;
-    margin: var(${theme.cssVarNames.globalBlockMargin});
 
     @media (max-width: ${breakpoints.md - 1}px) {
       margin: 0 10px;
@@ -53,6 +64,17 @@ export const SContactsContent = styled.div(
       () => css`
         padding-bottom: calc(
           var(${theme.cssVarNames.globalBlockPaddingVertical}) + 30px
+        );
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        padding-top: calc(
+          var(${theme.cssVarNames.globalBlockPaddingVertical}) + 30px
+        );
+        padding-bottom: calc(
+          var(${theme.cssVarNames.globalBlockPaddingVertical}) + 60px
         );
       `
     )}
@@ -100,6 +122,20 @@ export const SFieldsWrapper = styled.div(
     grid-gap: 35px;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     margin-top: 45px;
+
+    ${media.lg(
+      () => css`
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        margin-top: 67px;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        margin-top: 76px;
+        grid-gap: 70px;
+      `
+    )}
   `
 )
 
@@ -107,7 +143,7 @@ export const SFields = styled(TextList)(
   () => css`
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 21px;
 
     li {
@@ -119,5 +155,25 @@ export const SFields = styled(TextList)(
     li + li {
       margin-top: 14px;
     }
+
+    ${media.lg(
+      () => css`
+        font-size: 1.25rem;
+
+        li + li {
+          margin-top: 21px;
+        }
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 1.5rem;
+
+        li + li {
+          margin-top: 28px;
+        }
+      `
+    )}
   `
 )

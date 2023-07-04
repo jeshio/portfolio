@@ -28,8 +28,15 @@ export const SParagraph = styled.p<{
 
     ${media.md(
       () => css`
-        font-size: clamp(1rem, 3vw, 1.25rem);
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
         margin: 30px 0;
+      `
+    )}
+
+    ${media.xl(
+      () => css`
+        font-size: 1.35rem;
+        margin: 40px 0;
       `
     )}
   `

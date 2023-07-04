@@ -71,7 +71,7 @@ export const useLogic = () => {
             workingLinesByCompanies[
               rowCompanyName as keyof typeof workingLinesByCompanies
             ] as Array<number | number[]>
-          ).map(workingLine => {
+          ).map((workingLine, index) => {
             const columnIsRowCompany = Array.isArray(workingLine)
 
             if (columnIsRowCompany) {
@@ -80,6 +80,7 @@ export const useLogic = () => {
                   style={{
                     flex: workingLine[0],
                   }}
+                  key={index}
                 >
                   &nbsp;
                   <SWorkingLine />
@@ -92,6 +93,7 @@ export const useLogic = () => {
                 style={{
                   flex: workingLine,
                 }}
+                key={index}
               />
             )
           })}

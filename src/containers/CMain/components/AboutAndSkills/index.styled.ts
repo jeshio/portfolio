@@ -5,11 +5,10 @@ import { Button } from '@components/Button'
 import { media } from '@helpers/media'
 
 export const SAboutAndSkills = styled.section(
-  ({ theme }) => css`
+  () => css`
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin: var(${theme.cssVarNames.globalBlockMargin});
 
     > * {
       flex: 1 1 350px;
@@ -19,6 +18,12 @@ export const SAboutAndSkills = styled.section(
       () => css`
         flex-direction: column;
         flex-wrap: nowrap;
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        flex-direction: row;
       `
     )}
   `
@@ -86,9 +91,21 @@ export const SSkills = styled.div(
 export const SSkillsTitle = styled(Title)(
   ({ theme }) => css`
     color: ${theme.colors.white};
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     ${media.md(
+      () => css`
+        margin-bottom: 25px;
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        margin-bottom: 20px;
+      `
+    )}
+
+    ${media.xl(
       () => css`
         margin-bottom: 30px;
       `
@@ -100,7 +117,7 @@ export const STextList = styled(TextList)(
   ({ theme }) => css`
     color: ${theme.colors.white};
     list-style-type: disclosure-closed;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: clamp(1rem, 2.25vw, 1.35rem);
 
     > * {
       padding-left: 7px;
@@ -133,7 +150,6 @@ export const SCloud2ImageWrapper = styled.div(
 
 export const SButton = styled(Button)(
   () => css`
-    padding: 0 55px;
     display: block;
     margin: 30px auto 0;
     filter: drop-shadow(10px 15px 40px rgba(22, 19, 22, 0.3));
@@ -141,6 +157,13 @@ export const SButton = styled(Button)(
     ${media.md(
       () => css`
         margin-top: 40px;
+      `
+    )}
+
+    ${media.lg(
+      () => css`
+        margin-top: 50px;
+        margin-left: unset;
       `
     )}
   `

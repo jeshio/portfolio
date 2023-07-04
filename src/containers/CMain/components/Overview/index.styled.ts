@@ -7,7 +7,6 @@ export const SOverview = styled.section(
     padding: var(${theme.cssVarNames.globalBlockPadding});
     background: linear-gradient(135deg, #55baad 5%, rgba(88, 197, 183, 0) 76%);
     position: relative;
-    margin: var(${theme.cssVarNames.globalBlockMargin});
 
     * {
       color: ${theme.colors.white};
@@ -196,7 +195,6 @@ export const SRolesList = styled.ul(
 
 export const SButton = styled(Button)(
   () => css`
-    padding: 0 55px;
     display: block;
     margin: 50px auto 0;
     filter: drop-shadow(-3px 25px 80px rgba(20, 125, 112, 0.8));
