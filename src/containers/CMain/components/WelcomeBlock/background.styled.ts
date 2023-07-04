@@ -9,7 +9,6 @@ export const SBackgroundContainer = styled.div(
     min-height: 575px;
     max-height: 670px;
     border-radius: 40px 40px 0 0;
-    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.17));
 
     ${media.md(
       () => css`

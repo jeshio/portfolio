@@ -2,6 +2,7 @@ import type { GatsbyConfig } from 'gatsby'
 import path from 'path'
 
 const config: GatsbyConfig = {
+  pathPrefix: '/portfolio',
   siteMetadata: {
     title: 'Jeshio Portfolio',
     siteUrl: 'https://www.yourdomain.tld',

@@ -123,6 +123,10 @@ export const SFieldsWrapper = styled.div(
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     margin-top: 45px;
 
+    a {
+      text-decoration: unset;
+    }
+
     ${media.lg(
       () => css`
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));

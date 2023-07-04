@@ -9,9 +9,10 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "start": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public --repo git@github.com:jeshio/portfolio.git",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "lint": "gts lint",
@@ -54,6 +55,7 @@
     "@types/react-dom": "^18.0.10",
     "@types/react-helmet": "^6.1.6",
     "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0",
     "gts": "^3.1.1",
     "typescript": "^4.9.4"
   }

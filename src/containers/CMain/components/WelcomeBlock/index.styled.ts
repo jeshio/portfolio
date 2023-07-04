@@ -6,6 +6,8 @@ export const SWelcomeBlock = styled.section(
   () => css`
     position: relative;
     margin-top: 10px;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.17));
 
     @media (max-width: ${breakpoints.md - 1}px) {
       padding: 0 10px;

@@ -28,7 +28,6 @@ export const Layout: FC<{
     </Helmet>
     <GlobalStyles />
     <SLayout>
-      {children}
       <SBackgroundWrapper>
         <SPlainImage3 />
         <SPlainImage2 />
@@ -38,6 +37,7 @@ export const Layout: FC<{
         <SBottomPlainImage1 />
         <SBottomPlainImage2 />
       </SBackgroundWrapper>
+      {children}
     </SLayout>
   </ThemeProvider>
 )

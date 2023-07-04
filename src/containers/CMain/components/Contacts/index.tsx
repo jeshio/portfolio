@@ -26,13 +26,41 @@ export const Contacts: FC = () => {
             collaboration opportunities.
           </Paragraph>
           <SFieldsWrapper>
-            <SFields items={['E-mail', 'gojeshio@gmail.com']} noPoints />
             <SFields
-              items={['Phone Number', '+7 952 700-00-70', '+998 91-797-76-15']}
+              items={[
+                'E-mail',
+                <a href="mailto:gojeshio@gmail.com" target="_blank">
+                  gojeshio@gmail.com
+                </a>,
+              ]}
               noPoints
             />
             <SFields
-              items={['Links', 'DOWNLOAD RESUME', 'LinkedIn', 'GitHub']}
+              items={[
+                'Phone Number',
+                <a href="tel:+79527000070" target="_blank">
+                  +7 952 700-00-70
+                </a>,
+                <a href="tel:+998917977615" target="_blank">
+                  +998 91-797-76-15
+                </a>,
+              ]}
+              noPoints
+            />
+            <SFields
+              items={[
+                'Links',
+                'DOWNLOAD RESUME',
+                <a
+                  href="https://www.linkedin.com/in/georgey-ivanov-4bb287114"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>,
+                <a href="https://github.com/jeshio" target="_blank">
+                  GitHub
+                </a>,
+              ]}
               noPoints
             />
           </SFieldsWrapper>
