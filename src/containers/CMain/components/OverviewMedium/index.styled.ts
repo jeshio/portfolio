@@ -235,7 +235,6 @@ export const SRolesList = styled.ul(
 
 export const SButton = styled(Button)(
   () => css`
-    display: block;
     margin: 50px auto 0;
     filter: drop-shadow(-3px 25px 80px rgba(20, 125, 112, 0.8));
   `

@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import {
   GlobalStyles,
+  SBackgroundWrapper,
   SBottomPlainImage1,
   SBottomPlainImage2,
   SLayout,
@@ -28,13 +29,15 @@ export const Layout: FC<{
     <GlobalStyles />
     <SLayout>
       {children}
-      <SPlainImage3 />
-      <SPlainImage2 />
-      <SPlainImage1 />
-      <SLeftBackground />
-      <SRightBackground />
-      <SBottomPlainImage1 />
-      <SBottomPlainImage2 />
+      <SBackgroundWrapper>
+        <SPlainImage3 />
+        <SPlainImage2 />
+        <SPlainImage1 />
+        <SLeftBackground />
+        <SRightBackground />
+        <SBottomPlainImage1 />
+        <SBottomPlainImage2 />
+      </SBackgroundWrapper>
     </SLayout>
   </ThemeProvider>
 )

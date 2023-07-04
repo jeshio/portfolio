@@ -14,7 +14,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 export const AboutAndSkills = () => {
   return (
-    <SAboutAndSkills>
+    <SAboutAndSkills id="about">
       <SAbout>
         <SCloud2ImageWrapper>
           <StaticImage
@@ -56,7 +56,7 @@ export const AboutAndSkills = () => {
             </div>,
           ]}
         />
-        <SButton>Check it</SButton>
+        <SButton to="#overview">Check it</SButton>
       </SSkills>
     </SAboutAndSkills>
   )

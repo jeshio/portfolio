@@ -1,15 +1,16 @@
 import React, { forwardRef } from 'react'
-import { SButton } from '@components/Button/index.styled'
+import { SButton, SLink } from '@components/Button/index.styled'
 import { ButtonProps } from '@components/Button/types'
-import { Link } from 'gatsby'
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ to, ...htmlProps }, ref) => {
     if (to) {
       return (
-        <Link to={to}>
-          <SButton as="span" {...htmlProps} ref={ref} />
-        </Link>
+        <SLink
+          to={to}
+          {...(htmlProps as unknown[])}
+          innerRef={ref as unknown as React.Ref<HTMLAnchorElement>}
+        />
       )
     }
 

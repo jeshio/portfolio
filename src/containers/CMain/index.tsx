@@ -10,8 +10,10 @@ export const CMain: FC = () => (
   <SCMain>
     <WelcomeBlock />
     <AboutAndSkills />
-    <Overview />
-    <OverviewMedium />
+    <div id="overview">
+      <Overview />
+      <OverviewMedium />
+    </div>
     <Contacts />
   </SCMain>
 )

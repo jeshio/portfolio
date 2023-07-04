@@ -58,7 +58,7 @@ const OverviewMedium: FC = () => {
           </SYearsList>
         </SChart>
       </SContent>
-      <SButton>Get contacts</SButton>
+      <SButton to="#contacts">Get contacts</SButton>
     </SOverviewMedium>
   )
 }

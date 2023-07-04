@@ -67,6 +67,6 @@ export const WelcomeBlock = () => (
       <SRoleText>senior frontend developer</SRoleText>
       <SNameText>Georgey Ivanov</SNameText>
     </SContent>
-    <SButton>Take a look→</SButton>
+    <SButton to="#about">Take a look→</SButton>
   </SWelcomeBlock>
 )

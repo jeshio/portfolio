@@ -76,7 +76,7 @@ export const Overview: FC = () => {
           </li>
         </SCompaniesList>
       </SDiagram>
-      <SButton>Get contacts</SButton>
+      <SButton to="#contacts">Get contacts</SButton>
     </SOverview>
   )
 }

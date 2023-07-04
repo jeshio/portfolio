@@ -13,7 +13,7 @@ import { Paragraph } from '@components/Paragraph'
 
 export const Contacts: FC = () => {
   return (
-    <SContacts>
+    <SContacts id="contacts">
       <SContactsInner>
         <SContactsContent>
           <SContactsExtraBackground />

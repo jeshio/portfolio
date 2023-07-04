@@ -35,6 +35,17 @@ export const SLayout = styled.div(
   `
 )
 
+export const SBackgroundWrapper = styled.div(
+  () => css`
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+  `
+)
+
 export const SPlainImage1 = styled.div(
   () => css`
     background: url('${PlainImage}') no-repeat;
@@ -93,7 +104,7 @@ export const SPlainImage3 = styled.div(
     ${media.xl(
       () => css`
         left: unset;
-        right: -201px;
+        right: calc(50% - 390px);
       `
     )}
   `
